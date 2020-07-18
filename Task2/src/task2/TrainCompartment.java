@@ -26,14 +26,17 @@ public class TrainCompartment {
         int addOrSubtractableValue = getDifferenceBetweenSeats(columnNo, row);
         
         if (row % 2 != 0) {//for odd rows
+            //if row is odd adding this value will give facing seat no.
             seatNumberFacingPassenger = passengerSeatNumber + addOrSubtractableValue;
         } else {// for even rows
+            //if row is even substracting this value will give facing seat no.
             seatNumberFacingPassenger = passengerSeatNumber - addOrSubtractableValue;
         }
        
     }
 
     private int getDifferenceBetweenSeats(int columnNo, int row) {
+        //different condition for odd and even row because direction of counting is alternative
         if (row % 2 != 0) {
             return 13 - (2 * columnNo);
         }else{
@@ -42,7 +45,7 @@ public class TrainCompartment {
     }
     
     public  void findTypeOfSeat(int columnNo){
-        
+        //find the seat-type according to column number
         switch(columnNo){
             case 1:
             case 6:
@@ -61,11 +64,13 @@ public class TrainCompartment {
 
     public void calculateFacingSeatNoAndSeatType() {
         int i;
+        //go through all seats available in train compartment
         for (i = 0; i < totalNoOfRows; i++) {
             if (passengerSeatNumber >= 6 * i + 1 && passengerSeatNumber <= 6 * i + 6) {
                 int rowStart = 6 * i + 1, rowEnd = 6 * i + 6;
                 int j,columnNo=0;
                 for (j = rowStart; j <= rowEnd; j++) {
+                    //tranversing in row in which passanger seat is
                     columnNo++;
                     if (passengerSeatNumber == j) {
                         int row = i + 1;                        
