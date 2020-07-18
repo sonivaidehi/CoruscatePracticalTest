@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package task1;
+import java.util.Scanner;
 import task1.ChocolateDistribution;
 /**
  *
@@ -17,13 +18,26 @@ public class Task1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ChocolateDistribution cd = new ChocolateDistribution(20, 3);
         
-        cd.findMinimumChocolateLeft();
+        int noOfTestcases = 0;
+        //Stream for taking input
+        Scanner sc= new Scanner(System.in); 
         
-        ChocolateDistribution cd2 = new ChocolateDistribution(13, 5);
+        //taking input for No. of Test cases
+        System.out.println("Enter No. of Testcases: ");
+        noOfTestcases = sc.nextInt();
         
-        cd2.findMinimumChocolateLeft();
+        //Take input for testcases
+        for(int i = 0; i<noOfTestcases;i++){
+            System.out.println("Enter No. of Chocolate:  ");
+            int c = sc.nextByte();
+            System.out.println("Enter No. Of Student: ");
+            int n = sc.nextInt();
+            
+            ChocolateDistribution testcase = new ChocolateDistribution(c,n);
+            //calling method to calculate minimum no. of Chocolate left
+            testcase.findMinimumChocolateLeft();
+        }
         
     }
     
