@@ -34,6 +34,7 @@ public class Task1 {
             System.out.println("Enter No. Of Student: ");
             int n = sc.nextInt();
             
+            //creating instance of a class
             ChocolateDistribution testcase = new ChocolateDistribution(c,n);
             //calling method to calculate minimum no. of Chocolate left
             testcase.findMinimumChocolateLeft();
