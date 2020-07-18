@@ -17,6 +17,13 @@ public class Task1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ChocolateDistribution cd = new ChocolateDistribution(20, 3);
+        
+        cd.findMinimumChocolateLeft();
+        
+        ChocolateDistribution cd2 = new ChocolateDistribution(13, 5);
+        
+        cd2.findMinimumChocolateLeft();
         
     }
     

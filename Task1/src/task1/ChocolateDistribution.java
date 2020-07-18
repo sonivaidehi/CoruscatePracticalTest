@@ -46,6 +46,16 @@ public class ChocolateDistribution {
     }
 
     public void findMinimumChocolateLeft() {
+        double k;
+        int ceiled_k;
+        int floored_k;
+        int sumWith_ceiled_k = 0;
+        int sumWith_floored_k = 0;
+        int minChocolateWith_floored_k = 0;
+        int minChocolateWith_ceiled_k = 0;
+        k = ((2 * this.noOfChocolate / this.noOfStudents) + 1 - this.noOfStudents) / 2.0;
+        
+        System.out.println("k" + k);
         
     }
 }
