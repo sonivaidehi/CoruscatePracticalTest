@@ -102,7 +102,7 @@ public class ChocolateDistribution {
         }
 
         //print the final minimum no. of chocolate
-        System.out.println("Minimum Number of Chocolate left : " + minimumChocolateLeft);
+        System.out.println(minimumChocolateLeft);
 
     }
 }
