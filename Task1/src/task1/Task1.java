@@ -17,11 +17,7 @@ import task1.ChocolateDistribution;
 
 public class Task1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
 
         int noOfTestcases = 0;
         //Flag for  contraint of no of testcase
@@ -45,7 +41,7 @@ public class Task1 {
                 
                 noOfTestCase_flag = false;
                 
-                
+                //take input for testcases
                 for (int i = 0; i < noOfTestcases; i++) {
                     //flag for contraint on no of chocolate
                     boolean chocolate_flag = false;
