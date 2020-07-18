@@ -55,7 +55,26 @@ public class ChocolateDistribution {
         int minChocolateWith_ceiled_k = 0;
         k = ((2 * this.noOfChocolate / this.noOfStudents) + 1 - this.noOfStudents) / 2.0;
         
-        System.out.println("k" + k);
+            ceiled_k = (int) Math.ceil(k);
+            floored_k = (int) Math.floor(k);
+
+            for (int i = 0; i < 3; i++) {
+                sumWith_ceiled_k = sumWith_ceiled_k + ceiled_k + i;
+                sumWith_floored_k = sumWith_floored_k + floored_k + i;
+            }
+
+            minChocolateWith_ceiled_k = this.noOfChocolate - sumWith_ceiled_k;
+            minChocolateWith_floored_k = this.noOfChocolate - sumWith_floored_k;
+
+            if (minChocolateWith_ceiled_k < 0) {
+                setMinimumChocolateLeft(minChocolateWith_floored_k);
+            } else if (minChocolateWith_floored_k < 0) {
+                setMinimumChocolateLeft(minChocolateWith_ceiled_k);
+            } else {
+                setMinimumChocolateLeft(Math.min(minChocolateWith_ceiled_k, minChocolateWith_floored_k));
+            }
         
+        System.out.println(minimumChocolateLeft);
+
     }
 }
